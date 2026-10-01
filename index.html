@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src https://script.google.com https://script.googleusercontent.com; base-uri 'none'; form-action 'none'">
+<title>CCD Feedback 2026</title>
+<style>
+  :root{--bg:#f3f1fb;--card:#fff;--alt:#ece8f8;--ink:#17132a;--soft:#5d5873;--line:#dcd6ee;--brand:#0f766e;--brand-soft:#ccfbf1;
+        --ok:#15803d;--ok-soft:#dcfce7;--bad:#b91c1c;--bad-soft:#fee2e2;--warn:#b45309;--warn-soft:#fef3c7;--gold:#f59e0b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  h1,h2,h3{margin:0}
+  .wrap{max-width:680px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:0 1px 2px rgba(30,20,60,.05)}
+  .sub{color:var(--soft);font-size:13.5px;margin:0}.hint{color:var(--soft);font-size:12.5px}
+  label{display:block;font-size:13px;font-weight:600;margin:14px 0 5px}
+  input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+  textarea{resize:vertical;min-height:84px}
+  input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+  button{font:inherit;cursor:pointer;border-radius:10px;padding:9px 15px;border:1px solid var(--line);background:var(--alt);color:var(--ink)}
+  button:hover{border-color:var(--brand)}
+  button.go{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+  button.wide{width:100%;font-size:16px;padding:12px 18px}
+  button.danger{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:600}
+  button:disabled{opacity:.6;cursor:not-allowed}
+  .banner{background:linear-gradient(110deg,#0f766e 0%,#0e7490 45%,#6d28d9 100%);color:#fff;border-radius:14px;padding:18px;margin-bottom:14px}
+  .banner h1{font-size:22px;margin-bottom:3px}.banner .sub{color:#ccfbf1}
+  .msg{padding:10px 12px;border-radius:10px;font-size:14px;margin-top:10px}
+  .msg.err{background:var(--bad-soft);color:var(--bad)}.msg.warn{background:var(--warn-soft);color:var(--warn)}.msg.ok{background:var(--ok-soft);color:var(--ok)}
+  .pin{text-align:center;font-size:30px;letter-spacing:.5em;font-weight:700;padding:12px;max-width:240px;margin:6px auto 0;display:block}
+  .who{background:var(--alt);border-radius:10px;padding:10px 12px;font-size:14px;margin-bottom:6px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+  .who b{font-size:16px}
+  .quote{margin-top:6px;font-size:13.5px;color:#0f766e;background:#fff;border-radius:8px;padding:7px 10px}.who a{color:var(--brand);cursor:pointer;text-decoration:underline;font-size:13px}
+  .qq{border:1px solid var(--line);border-left:5px solid var(--brand);border-radius:12px;padding:12px 14px;margin-top:12px}
+  .qq:nth-child(5n+2){border-left-color:#db2777}.qq:nth-child(5n+3){border-left-color:#d97706}.qq:nth-child(5n+4){border-left-color:#0369a1}.qq:nth-child(5n){border-left-color:#6d28d9}
+  .qq p{margin:0 0 6px;font-weight:600}
+  .stars{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+  .stars button{background:none;border:0;padding:2px 3px;font-size:34px;line-height:1;color:#d6d3e0;border-radius:8px}
+  .stars button.on{color:var(--gold)}
+  .stars button:hover{transform:scale(1.08)}
+  .stars .lab{font-size:13px;color:var(--soft);margin-left:8px;min-width:80px}
+  .qq.miss{border-color:var(--bad);background:#fff7f7}
+  .big{font-size:52px;font-weight:800;line-height:1;text-align:center;color:var(--gold);letter-spacing:4px}
+  .foot{color:var(--soft);font-size:12.5px;text-align:center;padding:10px 0 26px}
+  .spin{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:7px}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .hidden{display:none!important}
+  .gate{display:grid;place-items:center;min-height:70vh;padding:16px}
+  .gate .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;width:100%;max-width:360px;text-align:center}
+  .gate input{text-align:center;letter-spacing:.3em;font-size:19px}
+  @media (max-width:480px){.wrap{padding:12px}.card{padding:16px}.stars button{font-size:30px}}
+</style>
+</head>
+<body>
+<div id="studentView" class="wrap">
+  <div class="banner"><h1>CCD 2026 — Course Feedback</h1>
+    <p class="sub">Cloud Computing and DevOps · Prof. Pranati Waghodekar · Panels B, F and J2</p></div>
+
+  <div class="card" id="s1">
+    <h2 style="font-size:18px;text-align:center">Enter the last 4 digits of your PRN</h2>
+    <p class="sub" style="text-align:center">Example: if your PRN is 123456<b>7890</b>, type <b>7890</b>.</p>
+    <input id="pin" class="pin" type="text" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="••••" aria-label="Last 4 digits of PRN">
+    <div id="m1"></div>
+    <div style="margin-top:16px"><button class="go wide" id="b1">Continue</button></div>
+  </div>
+
+  <div class="card hidden" id="s2">
+    <div class="who" style="display:block"><div>Hello, <b id="wName"></b> — please give your feedback</div><div class="quote">☁️ <i id="wQuote"></i></div></div>
+    <p class="sub">Tap the stars: 1 = Poor · 2 = Fair · 3 = Good · 4 = Very good · 5 = Excellent.</p>
+    <div id="qs"></div>
+    <label for="cm">Your comment <span class="hint">(optional · up to 200 characters)</span></label>
+    <textarea id="cm" maxlength="200" placeholder="What did you like most, or what should be improved?"></textarea>
+    <div class="hint" style="text-align:right"><span id="cmN">0</span> / 200</div>
+    <div id="m2"></div>
+    <div style="margin-top:14px"><button class="go wide" id="b2">Submit feedback</button></div>
+  </div>
+
+  <div class="card hidden" id="s3" style="text-align:center">
+    <h2 style="font-size:20px" id="tTitle">Thank you!</h2>
+    <div class="big" id="tStars" style="margin:14px 0 6px"></div>
+    <p class="sub" id="tText"></p>
+    <div style="margin-top:16px"><button class="wide" id="b3">Done</button></div>
+  </div>
+
+  <p class="foot">Prof. Pranati Waghodekar · Department of Computer Engineering and Technology · MIT-WPU<br><a id="toFaculty" style="cursor:pointer;text-decoration:underline">🔒 Faculty / Admin console</a></p>
+</div>
+
+<div id="adminView" class="hidden">
+  <div id="aGate" class="gate"><div class="box">
+    <h1 style="font-size:20px;margin-bottom:6px">Faculty access</h1>
+    <p class="sub" style="margin-bottom:16px">Enter the faculty code.</p>
+    <input id="pw" type="password" autocomplete="off" maxlength="16">
+    <div id="aMsg"></div>
+    <button class="go" id="aGo" style="width:100%;margin-top:10px">Open</button>
+    <p class="hint" style="margin-top:12px"><a id="aBack" style="cursor:pointer;text-decoration:underline">Back</a></p>
+  </div></div>
+  <div id="aApp"></div>
+</div>
+<script>
+(function(){
+'use strict';
+/* Backend address (public). Student list, questions and the faculty console are kept on the server. */
+var API_URL = 'https://script.google.com/macros/s/AKfycbw4KldiETo3nc5KSMy72qg-gRbvZFiaXDAHko_KlDhcwLRuteCyOii3Cx58yORK4SUPYA/exec';
+var LABELS = ['', 'Poor', 'Fair', 'Good', 'Very good', 'Excellent'];
+var QUOTES = [
+  'The cloud is not a place — it is a way of building things that scale.',
+  'Automate today what you did by hand yesterday.',
+  'Small commits, frequent deploys, fewer surprises.',
+  'If it hurts, do it more often — and let the pipeline do it for you.',
+  'Build once, deploy anywhere: that is the promise of containers.',
+  'Infrastructure as code turns servers into something you can review.',
+  'A green pipeline is a team\'s quiet celebration.',
+  'Scale out, not up — and pay only for what you use.',
+  'Monitor everything; the logs always tell the story.',
+  'Failures are lessons your pipeline teaches you early.',
+  'Dev and Ops are not two teams — they are one loop.',
+  'Your code is only done when it is running for real users.',
+  'Design for failure, and the cloud will reward you with resilience.',
+  'Version everything: code, config and infrastructure.',
+  'Continuous integration is a habit, not a tool.',
+  'The best deployment is the boring one.',
+  'Containers carry your app; Kubernetes carries your containers.',
+  'Elastic resources, elastic ideas — keep learning.',
+  'Every push is a step closer to production.',
+  'Keep calm and check the pipeline.'
+];
+var $ = function(i){ return document.getElementById(i); };
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function say(id,t,k){ var b=$(id); if(b) b.innerHTML = t ? '<div class="msg '+(k||'err')+'">'+esc(t)+'</div>' : ''; }
+function busy(b,on,label){ b.disabled=on; b.innerHTML = on ? '<span class="spin"></span>Please wait…' : label; }
+function api(body, cb, tries){
+  var done=false, ctl=window.AbortController?new AbortController():null;
+  var t=setTimeout(function(){ if(ctl) ctl.abort(); fin(null); }, 25000);
+  function fin(j){ if(done) return; done=true; clearTimeout(t);
+    if(j && j.ok===false && /busy/i.test(j.error||'')) j=null;
+    if(!j && (tries||0)>0){ setTimeout(function(){ api(body,cb,tries-1); },1500+Math.random()*3500); return; } cb(j); }
+  fetch(API_URL,{method:'POST',redirect:'follow',cache:'no-store',credentials:'omit',headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(body),signal:ctl?ctl.signal:undefined}).then(function(r){return r.json();}).then(fin).catch(function(){ fin(null); });
+}
+function show(id){ ['s1','s2','s3'].forEach(function(x){ $(x).classList.toggle('hidden', x!==id); }); window.scrollTo(0,0); }
+function starStr(n){ n=Math.round(n); var s=''; for(var i=1;i<=5;i++) s+= i<=n?'★':'☆'; return s; }
+
+/* ================= STUDENT ================= */
+var S = { pin:'', name:'', q:[], r:[] };
+$('pin').addEventListener('input',function(e){ e.target.value=e.target.value.replace(/\D/g,'').slice(0,4); });
+$('pin').addEventListener('keydown',function(e){ if(e.key==='Enter') $('b1').click(); });
+$('b1').onclick=function(){
+  var pin=$('pin').value.trim(); say('m1');
+  if(!/^\d{4}$/.test(pin)){ say('m1','Type exactly 4 digits — the last 4 digits of your PRN.'); return; }
+  var b=this; busy(b,true,'Continue');
+  api({action:'fbWho',pin:pin},function(j){
+    busy(b,false,'Continue');
+    if(!j){ say('m1','Cannot reach the server. Check your internet and try again.'); return; }
+    if(!j.ok){ say('m1',j.error); return; }
+    if(j.submitted){ say('m1','You have already given your feedback, '+j.student.name+'. Thank you!','ok'); return; }
+    if(!j.open){ say('m1','Feedback is closed now. Please wait for your faculty to open it.','warn'); return; }
+    S.pin=pin; S.name=j.student.name; S.q=j.q||[]; S.r=S.q.map(function(){ return 0; });
+    $('wName').textContent=j.student.name; $('wQuote').textContent=QUOTES[Number(pin)%QUOTES.length];
+    $('qs').innerHTML=S.q.map(function(q,i){
+      var st=''; for(var k=1;k<=5;k++) st+='<button type="button" data-q="'+i+'" data-v="'+k+'" aria-label="'+k+' star'+(k>1?'s':'')+' — '+LABELS[k]+'">★</button>';
+      return '<div class="qq" id="qq'+i+'"><p>'+(i+1)+'. '+esc(q)+'</p><div class="stars" role="group" aria-label="'+esc(q)+'">'+st+'<span class="lab" id="lab'+i+'">Not rated</span></div></div>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('#qs button'),function(x){ x.onclick=function(){
+      var i=Number(x.getAttribute('data-q')), v=Number(x.getAttribute('data-v')); S.r[i]=v; paint(i); $('qq'+i).classList.remove('miss'); if(S.r.every(function(x){return x;})) say('m2'); }; });
+    $('cm').value=''; $('cmN').textContent='0'; say('m2'); show('s2');
+  },4);
+};
+function paint(i){
+  Array.prototype.forEach.call(document.querySelectorAll('#qq'+i+' button'),function(x){ x.classList.toggle('on', Number(x.getAttribute('data-v'))<=S.r[i]); x.setAttribute('aria-pressed', String(Number(x.getAttribute('data-v'))===S.r[i])); });
+  $('lab'+i).textContent = S.r[i] ? S.r[i]+' — '+LABELS[S.r[i]] : 'Not rated';
+}
+$('cm').addEventListener('input',function(){ $('cmN').textContent=this.value.length; });
+$('b2').onclick=function(){
+  var miss=S.r.map(function(v,i){ return v?-1:i; }).filter(function(i){ return i>-1; });
+  miss.forEach(function(i){ $('qq'+i).classList.add('miss'); });
+  if(miss.length){ say('m2','Please give stars for every question ('+miss.length+' left).'); $('qq'+miss[0]).scrollIntoView({behavior:'smooth',block:'center'}); return; }
+  var b=this; busy(b,true,'Submit feedback'); say('m2');
+  api({action:'fbSubmit',pin:S.pin,ratings:S.r,comment:$('cm').value},function(j){
+    busy(b,false,'Submit feedback');
+    if(!j){ say('m2','Cannot reach the server. Check your internet and press Submit again.'); return; }
+    if(!j.ok){ say('m2',j.error); return; }
+    var a=S.r.reduce(function(s,x){return s+x;},0)/S.r.length;
+    $('tTitle').textContent = j.already ? 'You have already given your feedback' : 'Thank you, '+S.name+'!';
+    $('tStars').textContent = j.already ? '✓' : starStr(a);
+    $('tText').textContent = j.already ? 'Only one feedback is recorded for each student.' : 'Your feedback is recorded (average '+(Math.round(a*10)/10)+' / 5).';
+    show('s3');
+  },4);
+};
+$('b3').onclick=function(){ reset(); };
+function reset(){ S={pin:'',name:'',q:[],r:[]}; $('pin').value=''; $('qs').innerHTML=''; $('cm').value=''; say('m1'); show('s1'); setTimeout(function(){ $('pin').focus(); },50); }
+
+/* ================= FACULTY (open this page with #admin at the end of the link) ================= */
+var pwHeld='';
+function openGate(){ $('studentView').classList.add('hidden'); $('adminView').classList.remove('hidden'); $('aGate').classList.remove('hidden'); $('aApp').innerHTML=''; $('pw').value=''; say('aMsg'); setTimeout(function(){ $('pw').focus(); },50); }
+function closeGate(){ $('adminView').classList.add('hidden'); $('studentView').classList.remove('hidden'); try { history.replaceState(null,'',location.pathname+location.search); } catch(e){} }
+$('aBack').onclick=closeGate;
+$('toFaculty').onclick=openGate;
+$('pw').addEventListener('keydown',function(e){ if(e.key==='Enter') $('aGo').click(); });
+$('aGo').onclick=function(){
+  var pw=$('pw').value.trim(); if(!pw){ say('aMsg','Enter the code.'); return; }
+  var b=this; busy(b,true,'Open');
+  api({action:'fbAdmin',pw:pw,op:'app'},function(j){
+    busy(b,false,'Open'); $('pw').value='';
+    if(!j){ say('aMsg','Cannot reach the server.'); return; }
+    if(!j.ok){ say('aMsg',j.error); return; }
+    if(!window.FBA){
+      var st=document.createElement('style'); st.textContent=j.css||''; document.head.appendChild(st);
+      var sc=document.createElement('script'); sc.textContent=j.js||''; document.body.appendChild(sc);
+    }
+    delete j.js; delete j.css;
+    if(!window.FBA){ say('aMsg','The console could not load. Refresh and try again.'); return; }
+    $('aGate').classList.add('hidden');
+    window.FBA($('aApp'), pw, j, api, function(){ $('aGate').classList.remove('hidden'); openGate(); });
+    var idle=null, bump=function(){ clearTimeout(idle); idle=setTimeout(function(){ var l=document.getElementById('faLock'); if(l) l.click(); },20*60*1000); };
+    bump(); ['click','keydown'].forEach(function(e){ document.addEventListener(e,bump); });
+  },1);
+};
+if(/admin/i.test(location.hash||'')) openGate();
+window.addEventListener('hashchange',function(){ if(/admin/i.test(location.hash||'')) openGate(); });
+})();
+</script>
+</body>
+</html>
